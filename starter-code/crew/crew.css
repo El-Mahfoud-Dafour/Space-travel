@@ -1,0 +1,411 @@
+*::before,
+*::after,
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background-image: url(../assets/crew/background-crew-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Bellefair", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Utility Classes */
+
+.grid {
+  display: grid;
+}
+
+.grid-col-2 {
+  grid-template-columns: 60fr 40fr;
+  row-gap: 3rem;
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.gap {
+  gap: 1rem;
+}
+/************ Header **********/
+
+.main-header {
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.logo {
+  padding: 1rem;
+}
+
+.nav-toggle {
+  display: none;
+  z-index: 9999;
+}
+
+/* Navigation */
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+  padding: 1.4rem 5rem;
+  padding-right: 10rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  position: relative;
+  z-index: 99;
+}
+
+.nav-list span {
+  font-weight: 700;
+}
+
+.nav-list-item {
+  text-decoration: none;
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-family: "Barlow Condensed", sans-serif;
+  color: #fff;
+  letter-spacing: 2.7px;
+  position: relative;
+}
+
+.nav-list-item::before {
+  content: "";
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  width: 100%;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.nav-list-item.active::before {
+  transform: scaleX(1.1);
+}
+
+.nav-list-item:active::before {
+  transform: scaleX(1.1);
+  background-color: #fff;
+}
+
+.nav-list-item:hover::before {
+  transform: scaleX(1.1);
+  background-color: rgba(255, 255, 255, 0.541);
+}
+
+.nav-list::before {
+  content: "";
+  border-top: 1px solid rgb(255, 255, 255);
+  opacity: 0.26;
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  right: 660px;
+}
+
+/* Media Queries for header */
+@media screen and (max-width: 1024px) {
+  .nav-list {
+    padding-right: 5rem;
+  }
+  .nav-list::before {
+    width: 40%;
+    right: 587px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-list::before {
+    display: none;
+  }
+
+  .nav-list {
+    padding: 1.4rem 1.4rem;
+  }
+  .nav-list-item span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 60vw;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+    background: rgba(41, 41, 41, 0.6);
+    padding-top: 8rem;
+    padding-left: 2rem;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: hidden;
+    user-select: none;
+    transition: all 300ms ease-in-out;
+  }
+  @supports (backdrop-filter: blur(3px)) {
+    .nav-list {
+      /* Supported style with backdrop-filter */
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(3px);
+    }
+  }
+
+  .nav-open .nav-list {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list span {
+    display: block;
+  }
+
+  .nav-list-item {
+    font-size: 1rem;
+    letter-spacing: 2.7px;
+  }
+
+  .nav-toggle {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 28px;
+    right: 25px;
+    z-index: 999;
+  }
+
+  .nav-toggle .close-menu {
+    display: none;
+  }
+
+  .nav-open .close-menu {
+    display: block;
+  }
+
+  .nav-open .hamburger-menu {
+    display: none;
+  }
+}
+/**************** end  of header styling ***********/
+.container {
+  padding: 0 6rem;
+  max-width: 1400px;
+}
+/*   ******** header  ********* */
+
+.secondary-header {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4.725px;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-weight: 400;
+}
+.header-number {
+  margin-right: 1rem;
+  opacity: 0.5;
+  font-weight: 700;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-row: span 2;
+  position: relative;
+}
+.crew-img {
+  opacity: 0;
+  visibility: hidden;
+  user-select: none;
+  height: 0px;
+  width: 0px;
+  transition: all 200ms ease;
+}
+.crew-img.active {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+  user-select: all;
+  aspect-ratio: auto;
+  align-self: center;
+}
+
+/*  text container */
+.text-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  overflow: hidden;
+}
+.crew-title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  opacity: 0.5;
+}
+.crew-name {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+}
+.crew-description {
+  font-family: "Barlow-regular";
+  font-size: 1.2rem;
+  max-width: 500px;
+}
+
+/***** crew details and img switching */
+.crew-details {
+  opacity: 0;
+  visibility: hidden;
+  user-select: none;
+  width: 1px;
+  height: 1px;
+  transition: all 200ms ease;
+}
+
+.crew-details.active {
+  height: auto;
+  width: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  opacity: 1;
+  visibility: visible;
+  user-select: all;
+}
+
+/* switching info buttons */
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-bottom: 4rem;
+  margin-top: 2rem;
+}
+.crew-switch {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+
+  background-color: #fff;
+  opacity: 0.17436291;
+}
+
+.crew-switch:hover {
+  opacity: 0.5;
+  scale: 1.05;
+}
+.crew-switch.active {
+  opacity: 1;
+}
+/* media queries */
+@media (max-width: 940px) {
+  .container {
+    padding: 0rem 4rem;
+  }
+  .crew-title {
+    font-size: 1.5;
+  }
+  .crew-name {
+    font-size: 3rem;
+  }
+  .crew-img.active {
+    max-height: 30rem;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    background-image: url(/starter-code/assets/crew/background-crew-tablet.jpg);
+  }
+  .container {
+    padding: 0rem 2rem;
+  }
+  .grid-col-2 {
+    grid-template-columns: 1fr;
+  }
+  .gap {
+    gap: 5rem;
+  }
+  .text-container {
+    padding-top: 0rem;
+    align-items: center;
+    text-align: center;
+  }
+  .crew-description {
+    font-family: "Barlow-regular";
+    font-size: 1.2rem;
+    max-width: 500px;
+  }
+  .crew-switch {
+    width: 10px;
+    height: 10px;
+  }
+  .buttons {
+    justify-content: center;
+    padding: 0rem;
+    margin: 0rem;
+  }
+
+  .crew-img.active {
+    width: 65%;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    background-image: url(/starter-code/assets/crew/background-crew-mobile.jpg);
+  }
+  .gap {
+    gap: 2rem;
+  }
+  .secondary-header {
+    text-align: center;
+  }
+  .text-container {
+    gap: 1rem;
+  }
+  .img-container {
+    grid-row: 1;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.651);
+  }
+  .crew-img.active {
+    width: 50%;
+  }
+  .crew-title {
+    font-size: 1.4rem;
+  }
+  .crew-name {
+    font-size: 1.8rem;
+  }
+
+  .buttons {
+    order: -1;
+  }
+}

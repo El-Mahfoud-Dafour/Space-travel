@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700&family=Barlow:wght@400;500&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="destinations.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="35"
+          height="35"
+          viewBox="0 0 48 48"
+        >
+          <g fill="none" fill-rule="evenodd">
+            <circle cx="24" cy="24" r="24" fill="#FFF" />
+            <path
+              fill="#0B0D17"
+              d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"
+            />
+          </g>
+        </svg>
+      </div>
+      <button class="nav-toggle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="21"
+          class="close-menu"
+        >
+          <g fill="#D0D6F9" fill-rule="evenodd">
+            <path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z" />
+            <path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z" />
+          </g>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21">
+          <g fill="#D0D6F9" fill-rule="evenodd" class="hamburger-menu">
+            <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
+          </g>
+        </svg>
+      </button>
+      <nav>
+        <ul class="nav-list">
+          <li>
+            <a href="../index.html" class="nav-list-item"
+              ><span>00</span>Home</a
+            >
+          </li>
+          <li>
+            <a href="destination.html" class="nav-list-item active"
+              ><span>01</span>Destination</a
+            >
+          </li>
+          <li>
+            <a href="/starter-code/crew/crew.html" class="nav-list-item"
+              ><span>02</span>Crew</a
+            >
+          </li>
+          <li>
+            <a href="" class="nav-list-item"><span>03</span>Technology</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <h2 class="secondary-header">
+        <span class="header-number">01</span>Pick your destination
+      </h2>
+      <section class="gap grid grid-col-2">
+        <div class="img-container">
+          <!-- moon image  -->
+          <img
+            src="/starter-code/assets/destination/image-moon.png"
+            alt="moon
+          image"
+            title="moon image"
+            class="destination-img moon-img active"
+          />
+
+          <!-- mars image -->
+          <img
+            src="/starter-code/assets/destination/image-mars.png"
+            alt="mars image"
+            title="mars image"
+            class="destination-img mars-img"
+          />
+          <!-- europa image  -->
+          <img
+            src="/starter-code/assets/destination/image-europa.png"
+            alt="europa image"
+            title="Europa image"
+            class="destination-img europa-img"
+          />
+          <!-- TITAN image  -->
+          <img
+            src="/starter-code/assets/destination/image-titan.png"
+            alt="titan image"
+            title="titan image"
+            class="destination-img titan-img"
+          />
+        </div>
+        <div class="text-container">
+          <ul class="destination-list">
+            <li class="destination-list-item moon-item active">MOON</li>
+            <li class="destination-list-item mars-item">MARS</li>
+            <li class="destination-list-item europa-item">EUROPA</li>
+            <li class="destination-list-item titan-item">TITAN</li>
+          </ul>
+          <div class="destination-block moon-block active">
+            <h1 class="destination-header">MOON</h1>
+            <div class="destination-description">
+              See our planet as you’ve never seen it before. A perfect relaxing
+              trip away to help regain perspective and come back refreshed.
+              While you’re there, take in some history by visiting the Luna 2
+              and Apollo 11 landing sites.
+            </div>
+            <section class="grid grid-col-2">
+              <div class="info-block travel-distance">
+                <h3 class="info-title">Avg. distance</h3>
+                <span class="info">384,400 KM</span>
+              </div>
+              <div class="info-block travel-time">
+                <h3 class="info-title">Est. travel time</h3>
+                <span class="info">3 days</span>
+              </div>
+            </section>
+          </div>
+          <div class="destination-block mars-block">
+            <h1 class="destination-header">MARS</h1>
+            <div class="destination-description">
+              Don’t forget to pack your hiking boots. You’ll need them to tackle
+              Olympus Mons, the tallest planetary mountain in our solar system.
+              It’s two and a half times the size of Everest!
+            </div>
+            <section class="grid grid-col-2">
+              <div class="info-block travel-distance">
+                <h3 class="info-title">Avg. distance</h3>
+                <span class="info">225 MIL. km</span>
+              </div>
+              <div class="info-block travel-time">
+                <h3 class="info-title">Est. travel time</h3>
+                <span class="info">9 months</span>
+              </div>
+            </section>
+          </div>
+          <div class="destination-block europa-block">
+            <h1 class="destination-header">EUROPA</h1>
+            <div class="destination-description">
+              The smallest of the four Galilean moons orbiting Jupiter, Europa
+              is a winter lover’s dream. With an icy surface, it’s perfect for a
+              bit of ice skating, curling, hockey, or simple relaxation in your
+              snug wintery cabin.
+            </div>
+            <section class="grid grid-col-2">
+              <div class="info-block travel-distance">
+                <h3 class="info-title">Avg. distance</h3>
+                <span class="info">628 MIL. km</span>
+              </div>
+              <div class="info-block travel-time">
+                <h3 class="info-title">Est. travel time</h3>
+                <span class="info">3 years</span>
+              </div>
+            </section>
+          </div>
+          <div class="destination-block titan-block">
+            <h1 class="destination-header">TITAN</h1>
+            <div class="destination-description">
+              The only moon known to have a dense atmosphere other than Earth,
+              Titan is a home away from home (just a few hundred degrees
+              colder!). As a bonus, you get striking views of the Rings of
+              Saturn.
+            </div>
+            <section class="grid grid-col-2">
+              <div class="info-block travel-distance">
+                <h3 class="info-title">Avg. distance</h3>
+                <span class="info">1.6 BIL. km</span>
+              </div>
+              <div class="info-block travel-time">
+                <h3 class="info-title">Est. travel time</h3>
+                <span class="info">7 years</span>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="destination.js"></script>
+  </body>
+</html>

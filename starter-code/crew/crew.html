@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700&family=Barlow:wght@400;500&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="crew.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="35"
+          height="35"
+          viewBox="0 0 48 48"
+        >
+          <g fill="none" fill-rule="evenodd">
+            <circle cx="24" cy="24" r="24" fill="#FFF" />
+            <path
+              fill="#0B0D17"
+              d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"
+            />
+          </g>
+        </svg>
+      </div>
+      <button class="nav-toggle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="21"
+          class="close-menu"
+        >
+          <g fill="#D0D6F9" fill-rule="evenodd">
+            <path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z" />
+            <path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z" />
+          </g>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21">
+          <g fill="#D0D6F9" fill-rule="evenodd" class="hamburger-menu">
+            <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
+          </g>
+        </svg>
+      </button>
+      <nav>
+        <ul class="nav-list">
+          <li>
+            <a href="../index.html" class="nav-list-item"
+              ><span>00</span>Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/starter-code/destinations/destination.html"
+              class="nav-list-item"
+              ><span>01</span>Destination</a
+            >
+          </li>
+          <li>
+            <a href="" class="nav-list-item active"><span>02</span>Crew</a>
+          </li>
+          <li>
+            <a href="" class="nav-list-item"><span>03</span>Technology</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <h2 class="secondary-header">
+        <span class="header-number">02</span>
+        meet your crew
+      </h2>
+      <section class="grid grid-col-2 gap">
+        <div class="text-container">
+          <div class="crew-details">
+            <h3 class="crew-title">commander</h3>
+            <h1 class="crew-name">douglas hurley</h1>
+            <p class="crew-description">
+              Douglas Gerald Hurley is an American engineer, former Marine Corps
+              pilot and former NASA astronaut. He launched into space for the
+              third time as commander of Crew Dragon Demo-2.
+            </p>
+          </div>
+          <div class="crew-details">
+            <h3 class="crew-title">Mession specialist</h3>
+            <h1 class="crew-name">mark shuttlerworth</h1>
+            <p class="crew-description">
+              Mark Richard Shuttleworth is the founder and CEO of Canonical, the
+              company behind the Linux-based Ubuntu operating system.
+              Shuttleworth became the first South African to travel to space as
+              a space tourist.
+            </p>
+          </div>
+          <div class="crew-details">
+            <h3 class="crew-title">pilot</h3>
+            <h1 class="crew-name">Victor Glover</h1>
+            <p class="crew-description">
+              Pilot on the first operational flight of the SpaceX Crew Dragon to
+              the International Space Station. Glover is a commander in the U.S.
+              Navy where he pilots an F/A-18.He was a crew member of Expedition
+              64, and served as a station systems flight engineer.
+            </p>
+          </div>
+          <div class="crew-details">
+            <h3 class="crew-title">Flight Engineer</h3>
+            <h1 class="crew-name">Anousheh Ansari</h1>
+            <p class="crew-description">
+              Anousheh Ansari is an Iranian American engineer and co-founder of
+              Prodea Systems. Ansari was the fourth self-funded space tourist,
+              the first self-funded woman to fly to the ISS, and the first
+              Iranian in space.
+            </p>
+          </div>
+        </div>
+        <div class="img-container">
+          <img
+            src="/starter-code/assets/crew/image-douglas-hurley.png"
+            alt=" commander douglas hurley"
+            title=" photograph of commander douglas hurley"
+            class="crew-img"
+            t
+          />
+          <img
+            src="/starter-code/assets/crew/image-mark-shuttleworth.png"
+            alt=" photograph of Mession specialist mark shuttlerworth"
+            title="photograph of Mession specialist mark shuttlerworth"
+            class="crew-img"
+          />
+          <img
+            src="/starter-code/assets/crew/image-victor-glover.png"
+            alt=" photograph of pilot Victor Glover"
+            title="photograph of pilot Victor Glover"
+            class="crew-img"
+          />
+          <img
+            src="/starter-code/assets/crew/image-anousheh-ansari.png"
+            alt=" photograph of flight engineer Anousheh Ansari"
+            title="photograph of flight engineer Anousheh Ansari"
+            class="crew-img"
+          />
+        </div>
+        <div class="buttons">
+          <button class="crew-switch active"></button
+          ><button class="crew-switch"></button
+          ><button class="crew-switch"></button
+          ><button class="crew-switch"></button>
+        </div>
+      </section>
+    </main>
+    <script src="crew.js"></script>
+  </body>
+</html>

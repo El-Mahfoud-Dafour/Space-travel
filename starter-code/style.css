@@ -12,8 +12,13 @@ body {
   font-family: sans-serif;
   font-family: "Bellefair", serif;
   overflow-x: hidden;
+  background-image: url(/Space-travel/starter-code/assets/home/background-home-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
+a {
+  text-decoration: none;
+}
 /* Utility Classes */
 
 .grid {
@@ -27,7 +32,6 @@ body {
 /* Hero Section */
 
 .hero-section {
-  background-image: url(assets/home/background-home-desktop.jpg);
   background-size: cover;
   height: 100vh;
 }
@@ -193,6 +197,9 @@ main {
 /* Media Queries for Main */
 
 @media screen and (max-width: 768px) {
+  body {
+    background-image: url(/Space-travel/starter-code/assets/home/background-home-tablet.jpg);
+  }
   .nav-list::before {
     display: none;
   }
@@ -207,13 +214,8 @@ main {
     margin-top: 3rem;
   }
 
-  .hero-section {
-    height: 100vh;
-    background-image: url(/starter-code/assets/home/background-home-tablet.jpg);
-    background-size: cover;
-  }
-
   .hero-header {
+    font-size: 6rem;
     padding: 0;
   }
 
@@ -228,8 +230,8 @@ main {
 }
 
 @media screen and (max-width: 450px) {
-  .hero-section {
-    background-image: url(/starter-code/assets/home/background-home-mobile.jpg);
+  body {
+    background-image: url(/Space-travel/starter-code/assets/home/background-home-mobile.jpg);
   }
 
   /* Navigation (Mobile) */
@@ -336,5 +338,3 @@ main {
     box-shadow: none;
   }
 }
-
-/* End of Styles */

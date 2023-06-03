@@ -354,7 +354,7 @@ button {
 }
 @media (max-width: 768px) {
   body {
-    background-image: url(/Space-travel/starter-code/assets/technology/background-technology-tablet.jpg);
+    background-image: url(../assets/technology/background-technology-tablet.jpg);
     padding-bottom: 3rem;
   }
 
@@ -412,7 +412,7 @@ button {
 }
 @media (max-width: 400px) {
   body {
-    background-image: url(/Space-travel/starter-code/assets/technology/background-technology-mobile.jpg);
+    background-image: url(../assets/technology/background-technology-mobile.jpg);
   }
   .secondary-header {
     font-size: 1.2rem;

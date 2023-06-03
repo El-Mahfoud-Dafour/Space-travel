@@ -414,7 +414,7 @@ button {
 
 @media (max-width: 445px) {
   body {
-    background-image: url(/Space-travel/starter-code/assets/destination/background-destination-mobile.jpg);
+    background-image: url(../assets/destination/background-destination-mobile.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }

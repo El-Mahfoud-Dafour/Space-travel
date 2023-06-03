@@ -10,7 +10,7 @@
 body {
   font-family: "Bellefair", serif, sans-serif; /* Combine font-family declaration */
   overflow-x: hidden;
-  background-image: url(/Space-travel/starter-code/assets/home/background-home-desktop.jpg);
+  background-image: url(./assets/home/background-home-desktop.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -278,7 +278,7 @@ main {
 /* Media Queries for Main */
 @media screen and (max-width: 768px) {
   body {
-    background-image: url(/Space-travel/starter-code/assets/home/background-home-tablet.jpg);
+    background-image: url(./assets/home/background-home-tablet.jpg);
   }
   .nav-list::before {
     display: none;
@@ -308,7 +308,7 @@ main {
 
 @media screen and (max-width: 450px) {
   body {
-    background-image: url(/Space-travel/starter-code/assets/home/background-home-mobile.jpg);
+    background-image: url(./assets/home/background-home-mobile.jpg);
   }
   /* Navigation (Mobile) */
   .nav-list {

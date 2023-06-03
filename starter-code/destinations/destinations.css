@@ -346,7 +346,6 @@ button {
   user-select: all;
   transform: translateX(0%);
 }
-
 .destination-block {
   opacity: 0;
   height: 0;
@@ -411,14 +410,22 @@ button {
 }
 
 @media (max-width: 445px) {
+  body {
+    background-image: url(/Space-travel/starter-code/assets/destination/background-destination-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   .container {
     padding: 1rem 0.5rem;
+  }
+  .destination-header {
+    font-size: 4rem;
   }
   .destination-block {
     gap: 0.2rem;
   }
   .secondary-header {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
   }
   .destination-description {
@@ -430,6 +437,16 @@ button {
 
   .destination-block section {
     grid-template-columns: 1fr;
+  }
+
+  .destination-img.active:first-child {
+    transform: translateX(9%);
+  }
+  .destination-img.active:nth-child(3) {
+    transform: translateX(-5%);
+  }
+  .destination-img.active:nth-child(4) {
+    transform: translateX(-10%);
   }
 }
 

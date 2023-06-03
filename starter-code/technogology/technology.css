@@ -7,11 +7,12 @@
 
 body {
   margin: 0;
-  background-image: url(/Space-travel/starter-code/assets/crew/background-crew-desktop.jpg);
+  background-image: url(../assets/technology/background-technology-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Bellefair", sans-serif;
   overflow-x: hidden;
+  color: #fff;
 }
 
 /* Utility Classes */
@@ -21,17 +22,19 @@ body {
 }
 
 .grid-col-2 {
-  grid-template-columns: 60fr 40fr;
-  row-gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.grid-col-special {
+  grid-template-columns: 1fr 8fr;
+  gap: 2rem;
 }
 button {
   border: none;
   background: none;
   cursor: pointer;
 }
-.gap {
-  gap: 1rem;
-}
+
 /************ Header **********/
 
 .main-header {
@@ -209,9 +212,11 @@ button {
 }
 /**************** end  of header styling ***********/
 .container {
-  padding: 0 6rem;
+  padding-inline-start: 6rem;
+  padding-block: 2.5rem;
   max-width: 1400px;
 }
+
 /*   ******** header  ********* */
 
 .secondary-header {
@@ -220,7 +225,7 @@ button {
   text-transform: uppercase;
   letter-spacing: 4.725px;
   font-size: 1.5rem;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   margin-top: 2rem;
   font-weight: 400;
 }
@@ -229,187 +234,203 @@ button {
   opacity: 0.5;
   font-weight: 700;
 }
-
-.img-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  grid-row: span 2;
-  position: relative;
-}
-.crew-img {
-  opacity: 0;
-  visibility: hidden;
-  user-select: none;
-  height: 0px;
-  width: 0px;
-  transition: all 200ms ease;
-}
-.crew-img.active {
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-  opacity: 1;
-  visibility: visible;
-  user-select: all;
-  aspect-ratio: auto;
+/* text container */
+.text-container {
   align-self: center;
 }
 
-/*  text container */
-.text-container {
+.terminology-details {
+  display: none;
+}
+.terminology-details.active {
   display: flex;
   flex-direction: column;
-  padding-top: 2rem;
-  overflow: hidden;
+  gap: 1rem;
 }
-.crew-title {
-  text-transform: uppercase;
-  font-size: 2rem;
-  opacity: 0.5;
-  letter-spacing: 2.7px;
+/* .technology-details {
+} */
+.terminology {
+  color: #d0d6f9;
+  font-family: "Barlow Condensed";
+  font-size: 1.5rem;
   font-weight: 400;
+  letter-spacing: 2.7px;
 }
-.crew-name {
+.technology-name {
   text-transform: uppercase;
   font-size: 3.5rem;
   font-weight: 400;
 }
-.crew-description {
+.technology-description {
   font-family: "Barlow-regular";
   font-size: 1.2rem;
-  max-width: 500px;
+  line-height: 2;
 }
-
-/***** crew details and img switching */
-.crew-details {
-  opacity: 0;
-  visibility: hidden;
-  user-select: none;
-  width: 1px;
-  height: 1px;
-  transition: all 200ms ease;
-}
-
-.crew-details.active {
-  height: auto;
-  width: auto;
-  color: #fff;
+/* buttons */
+.btns {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  opacity: 1;
-  visibility: visible;
-  user-select: all;
+  gap: 2rem;
 }
-
-/* switching info buttons */
-.buttons {
+.switch-technology {
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  padding-bottom: 4rem;
-  margin-top: 2rem;
-}
-.crew-switch {
-  height: 15px;
-  width: 15px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
-
+  border: 1px solid rgba(255, 255, 255, 0.247);
+  transition: all 200ms ease-in;
+  justify-self: center;
+  align-self: center;
+}
+.switch-technology:hover {
+  border: 1px solid rgba(255, 255, 255, 0.877);
+}
+.switch-technology.active {
   background-color: #fff;
-  opacity: 0.17436291;
+  color: #111;
+}
+.switch-technology.active:hover {
+  background-color: #d0d6f9;
+}
+.none {
+  display: none;
+}
+/* image container */
+.img-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.img-container span {
+  display: none;
+}
+.img-container span.active {
+  display: block;
+}
+.landscape {
+  display: none;
 }
 
-.crew-switch:hover {
-  opacity: 0.5;
-  scale: 1.05;
-}
-.crew-switch.active {
-  opacity: 1;
-}
-/* media queries */
-@media (max-width: 940px) {
+/***** media queries      **/
+@media (max-width: 1024px) {
   .container {
-    padding: 0rem 4rem;
+    padding-inline-start: 2rem;
+    max-width: 1020px;
   }
-  .crew-title {
-    font-size: 1.5;
+  .grid-col-2 {
+    gap: 1rem;
   }
-  .crew-name {
-    font-size: 3rem;
+  .img-container img {
+    width: 90%;
   }
-  .crew-img.active {
-    max-height: 30rem;
+  .secondary-header {
+    margin-bottom: 2rem;
+  }
+  .terminology {
+    margin-bottom: 1rem;
+  }
+  .technology-name {
+    font-size: 2.7rem;
+  }
+}
+@media (max-width: 920px) {
+  .container {
+    padding-inline-start: 1rem;
+    padding-block: 2rem;
+    max-width: 900px;
+  }
+  .grid-col-2 {
+    gap: 0.5rem;
+  }
+  .img-container {
+    width: fit-content;
+  }
+  .technology-name {
+    font-size: 2.4rem;
   }
 }
 @media (max-width: 768px) {
   body {
-    background-image: url(/Space-travel/starter-code/assets/crew/background-crew-tablet.jpg);
+    background-image: url(/Space-travel/starter-code/assets/technology/background-technology-tablet.jpg);
+    padding-bottom: 3rem;
   }
+
   .container {
-    padding: 0rem 2rem;
+    padding: 0rem;
+  }
+  .grid-col-special {
+    grid-template-columns: 1fr;
   }
   .grid-col-2 {
     grid-template-columns: 1fr;
-  }
-  .gap {
-    gap: 5rem;
-  }
-  .text-container {
-    padding-top: 0rem;
-    align-items: center;
-    text-align: center;
-  }
-  .crew-description {
-    font-family: "Barlow-regular";
-    font-size: 1.2rem;
-    max-width: 500px;
-  }
-  .crew-switch {
-    width: 10px;
-    height: 10px;
-  }
-  .buttons {
-    justify-content: center;
-    padding: 0rem;
-    margin: 0rem;
-  }
-
-  .crew-img.active {
-    width: 65%;
-  }
-}
-
-@media (max-width: 450px) {
-  body {
-    background-image: url(/Space-travel/starter-code/assets/crew/background-crew-mobile.jpg);
-  }
-  .gap {
-    gap: 2rem;
+    row-gap: 3rem;
   }
   .secondary-header {
-    text-align: center;
-    font-size: 1.2rem;
+    margin-left: 2rem;
   }
-  .text-container {
-    gap: 1rem;
+  .terminology-details.active {
+    gap: 2rem;
+    max-width: 90vw;
   }
   .img-container {
     grid-row: 1;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.651);
+    width: 100vw;
+    display: block;
   }
-  .crew-img.active {
-    width: 50%;
+  .img-container img {
+    width: 100%;
   }
-  .crew-title {
-    font-size: 1.4rem;
+  .img-container span {
+    width: 100vw !important;
   }
-  .crew-name {
-    font-size: 1.8rem;
+  .landscape {
+    display: block;
+    width: 100%;
   }
-
-  .buttons {
-    order: -1;
+  .portrait {
+    display: none;
+  }
+  .launch-vehicle {
+    src: url(/Space-travel/starter-code/assets/technology/image-launch-vehicle-landscape.jpg);
+  }
+  .text-container {
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+  }
+  .btns {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .switch-technology {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    background-image: url(/Space-travel/starter-code/assets/technology/background-technology-mobile.jpg);
+  }
+  .secondary-header {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-left: 0;
+    margin-block: 1rem;
+  }
+  .terminology-details.active {
+    gap: 0.7rem;
+  }
+  .terminology {
+    font-size: 1rem;
+  }
+  .technology-name {
+    font-size: 1.6rem;
+  }
+  .switch-technology {
+    width: 40px;
+    height: 40px;
   }
 }

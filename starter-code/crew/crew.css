@@ -33,7 +33,6 @@ button {
   gap: 1rem;
 }
 /************ Header **********/
-
 .main-header {
   max-width: 1440px;
   display: flex;
@@ -51,7 +50,6 @@ button {
   z-index: 9999;
 }
 
-/* Navigation */
 .nav-list {
   list-style-type: none;
   display: flex;
@@ -117,7 +115,6 @@ button {
   right: 660px;
 }
 
-/* Media Queries for header */
 @media screen and (max-width: 1024px) {
   .nav-list {
     padding-right: 5rem;
@@ -207,6 +204,7 @@ button {
     display: none;
   }
 }
+
 /**************** end  of header styling ***********/
 .container {
   padding: 0 6rem;

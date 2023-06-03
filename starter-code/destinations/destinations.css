@@ -30,7 +30,6 @@ button {
   gap: 2rem;
 }
 /************ Header **********/
-
 .main-header {
   max-width: 1440px;
   display: flex;
@@ -48,7 +47,6 @@ button {
   z-index: 9999;
 }
 
-/* Navigation */
 .nav-list {
   list-style-type: none;
   display: flex;
@@ -114,11 +112,13 @@ button {
   right: 660px;
 }
 
-/* Media Queries */
-
 @media screen and (max-width: 1024px) {
+  .nav-list {
+    padding-right: 5rem;
+  }
   .nav-list::before {
-    width: 30%;
+    width: 40%;
+    right: 587px;
   }
 }
 
@@ -146,7 +146,6 @@ button {
     gap: 3rem;
     align-items: flex-start;
     background: rgba(41, 41, 41, 0.6);
-    /* backdrop-filter: blur(5px); */
     padding-top: 8rem;
     padding-left: 2rem;
     transform: translateX(100%);
@@ -202,6 +201,7 @@ button {
     display: none;
   }
 }
+
 /**************** end  of header styling ***********/
 /********* MAIN **************/
 
@@ -374,6 +374,9 @@ button {
     margin: auto;
     padding: 1rem 4rem;
     max-width: 1024px;
+  }
+  .destination-header {
+    font-size: 5rem;
   }
 }
 @media (max-width: 770px) {

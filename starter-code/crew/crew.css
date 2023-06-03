@@ -274,9 +274,9 @@ button {
   font-weight: 400;
 }
 .crew-description {
-  font-family: "Barlow-regular";
   font-size: 1.2rem;
   max-width: 500px;
+  line-height: 1.5;
 }
 
 /***** crew details and img switching */

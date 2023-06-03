@@ -262,9 +262,8 @@ button {
   font-weight: 400;
 }
 .technology-description {
-  font-family: "Barlow-regular";
   font-size: 1.2rem;
-  line-height: 2;
+  line-height: 1.5;
 }
 /* buttons */
 .btns {

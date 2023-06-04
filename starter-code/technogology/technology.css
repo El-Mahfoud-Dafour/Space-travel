@@ -380,7 +380,7 @@ button {
     display: block;
   }
   .img-container img {
-    width: 100%;
+    width: 110%;
   }
   .img-container span {
     width: 100vw !important;
